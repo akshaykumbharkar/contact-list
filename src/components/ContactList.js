@@ -49,7 +49,11 @@ const ContactList = (props) => {
           <i className="search icon" />
         </div>
       </div>
-      <div className="ui celled list">{renderContactList}</div>
+      <div className="ui celled list">
+        {renderContactList.length > 0
+          ? renderContactList
+          : "No Contacts Available"}
+      </div>
     </div>
   );
 };
